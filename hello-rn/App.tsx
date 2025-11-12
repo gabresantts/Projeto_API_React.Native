@@ -35,11 +35,11 @@ export default function App() {
   const [songs, setSongs] = useState<ItunesSong[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [message, setMessage] = useState<string>("Digite um termo e pressione 'Buscar' para começar.");
+  const [message, setMessage] = useState<string>("Digite uma música ou gênero musical e pressione 'Buscar' para começar.");
 
   async function searchSongs(term: string) {
     if (!term) {
-      setMessage("Por favor, digite um termo para buscar.");
+      setMessage("Por favor, digite uma música ou gênero musical para buscar.");
       return;
     }
     
@@ -169,7 +169,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: "#F6F7F9" 
+    backgroundColor: "#000783ff" 
   },
   center: { 
     flex: 1, 
